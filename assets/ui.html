@@ -7,14 +7,14 @@
       <div class="col-xs-12 col-md-6 col-md-push-3 well">
 	<div class="row row-centered">
           <div class="col-xs-6">
-          <h5>Room Temperature</h5>
+          <h5>Temperatura Dół</h5>
           </div>
           <div class="col-xs-6">
-          <h5>Outdoor Temperature</h5>
+          <h5>Temepratura zewnętrzna</h5>
           </div>
           <div class="col-xs-6">
           <h1>{{ tstat.currentTemp }}&deg;</h1>
-          {{ tstat.currentHumidity }}% Humidity
+          {{ tstat.currentHumidity }}% Wilgotności
           </div>
           <div class="col-xs-6">
           <h1>{{ tstat.outdoorTemp }}&deg;</h1>
@@ -41,20 +41,20 @@
              ng-class="tstat.mode == 'heat' ? 'btn-danger' : 'btn-default'"
              ng-click="setMode('heat')"
              >
-               Heat
+               Grzanie
             </a>
             <a role="button" class="btn btm-xs" ng-disabled="tstat.mode == 'cool'"
              ng-class="tstat.mode == 'cool' ? 'btn-primary' : 'btn-default'"
              ng-click="setMode('cool')"
              >
-             Cool</a>
+             Chłodz.</a>
           </div>
         </div>
 
         <div class="row row-centered">
 	   <div class="row">
 <div class="col-xs-7">
-              <h5>Fan (<span ng-show="blower.blowerRPM == 0">Off</span><span ng-hide="blower.blowerRPM == 0">{{ blower.blowerRPM }} RPM</span>)</h5>
+              <h5>Fan (<span ng-show="blower.blowerRPM == 0">Off</span><span ng-hide="blower.blowerRPM == 0">{{ blower.blowerRPM }} Obr</span>)</h5>
              <div class="btn-group" role="group">
                <a role="button" class="btn btn-default btm-sm" ng-disabled="tstat.fanMode == 'auto'" ng-click="setFanSpeed('auto')">
                  Auto
@@ -87,7 +87,7 @@
         <div class="col-xs-12 well">
           <div class="row row-centered">
   	   <div class="col-xs-12 col-md-12">
-                <h5>Cool Setpoint</h5>
+                <h5>Klimatyzacja</h5>
              </div>
   	   <div class="col-xs-4 col-md-12">
              <a role="button" class="btn btn-default btn-sm" ng-click="incCoolSetpoint(1)">
@@ -109,7 +109,7 @@
         <div class="col-xs-12 well">
       <div class="row row-centered">
         <div class="col-xs-12 col-md-12">
-           <h5>Heat Setpoint</h5>
+           <h5>Ogrzewanie</h5>
         </div>
         <div class="col-xs-4 col-md-12">
            <a role="button" class="btn btn-default btn-sm" ng-click="incHeatSetpoint(1)">
